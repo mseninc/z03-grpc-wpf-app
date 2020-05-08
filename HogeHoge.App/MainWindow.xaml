@@ -1,0 +1,22 @@
+﻿<Window x:Class="HogeHoge.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Loaded="Window_Loaded"
+        mc:Ignorable="d"
+        Title="HogeHoge" SizeToContent="Height" MinHeight="240" Width="320">
+    <StackPanel Margin="16">
+        <StackPanel Margin="8">
+            <TextBlock Text="Message" FontWeight="Bold" Margin="0 0 0 8" />
+            <TextBox Name="MessageTextBox" IsReadOnly="True" />
+        </StackPanel>
+        <StackPanel Name="ClientPanel" Margin="8">
+            <TextBlock Text="Client mode only" FontWeight="Bold" Margin="0 0 0 8" />
+            <Button Content="Activate" Click="ActivateButton_Click" Margin="0 0 0 8" />
+            <TextBox Name="ConnectionTypeTextBox" Text="TCP" />
+            <TextBox Name="ConnectionIdTextBox" Text="1" />
+            <Button Content="StartConnect" Click="StartConnectButton_Click" />
+        </StackPanel>
+    </StackPanel>
+</Window>

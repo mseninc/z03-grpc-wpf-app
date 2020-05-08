@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "HogeHoge.App";
+
+import "google/protobuf/empty.proto";
+
+service Commander {
+    rpc Activate (google.protobuf.Empty) returns (CommanderResult);
+    rpc StartConnect (StartConnectRequest) returns (CommanderResult);
+}
+
+message CommanderResult {
+    bool success = 1;
+    string message = 2;
+}
+
+message StartConnectRequest {
+    string connectionType = 1;
+    int32 connectionId = 2;
+}
